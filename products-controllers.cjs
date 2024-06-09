@@ -1,15 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 const { Pool } = require('pg');
+require('dotenv').config();
 const app = express();
 app.use(cors())
 
 const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'backend_tienda_online',
-  password: '%M1p0$tSQLx',
-  port: 5432,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
 });
 
 const getProducts = async () => {

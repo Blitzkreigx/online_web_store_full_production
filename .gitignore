@@ -25,3 +25,4 @@ dist-ssr
 
 # Archivos que no forman parte del proyecto
 indicaciones.txt
+.env
