@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-const productsControllers = require('./products-controllers');
-const usersControllers = require('./users-controllers')
+const productsControllers = require('./products-controllers.cjs');
+const usersControllers = require('./users-controllers.cjs')
 const app = express();
 const port = 3000;
 app.use(cors())
